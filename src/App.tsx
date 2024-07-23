@@ -253,43 +253,14 @@ const App = () => {
               'web_app_open_link',
               JSON.stringify({
                 url: 'https://coinmarketcap.com/',
-                try_instant_view: true,
+                // try_instant_view: true,
               }),
             );
           }}
         >
           <span className="line-clamp-* truncate text-ellipsis">open_link</span>
         </Button>
-        <Button
-          onClick={() => {
-            // window.TelegramWebviewProxy.postEvent(
-            //   'web_app_open_link',
-            //   JSON.stringify({
-            //     url: 'https://coinmarketcap.com/',
-            //     try_instant_view: false,
-            //   }),
-            // );
 
-            window.open('https://coinmarketcap.com', '_self');
-          }}
-        >
-          <span className="line-clamp-* truncate text-ellipsis">open_link</span>
-        </Button>
-        <Button
-          onClick={() => {
-            // window.TelegramWebviewProxy.postEvent(
-            //   'web_app_open_link',
-            //   JSON.stringify({
-            //     url: 'https://coinmarketcap.com/',
-            //     try_instant_view: false,
-            //   }),
-            // );
-
-            window.open('https://coinmarketcap.com', '_blank');
-          }}
-        >
-          <span className="line-clamp-* truncate text-ellipsis">open_link</span>
-        </Button>
         <Button
           onClick={() => {
             const complexObject = {
@@ -321,7 +292,7 @@ const App = () => {
             });
             const refParam = 'default_ref_param';
 
-            const url = `/voltix_dev_bot/voltix_dev_app?startapp=ref_code:ABCDEF;another_key:123`;
+            const url = `/voltix_dev_bot/voltix_dev_app?startapp=7d5351f4-a81d-40f4-9b9f-84ff4b103d37`;
             if (window.TelegramWebviewProxy) {
               window.TelegramWebviewProxy.postEvent(
                 'web_app_open_tg_link',
