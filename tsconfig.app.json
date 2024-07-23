@@ -19,8 +19,8 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false, // make it true when releasing
+    "noUnusedParameters": false, // make it true when releasing
     "noFallthroughCasesInSwitch": true,
 
     /* Alias */
