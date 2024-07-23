@@ -262,13 +262,30 @@ const App = () => {
         </Button>
         <Button
           onClick={() => {
-            window.TelegramWebviewProxy.postEvent(
-              'web_app_open_link',
-              JSON.stringify({
-                url: 'https://coinmarketcap.com/',
-                try_instant_view: false,
-              }),
-            );
+            // window.TelegramWebviewProxy.postEvent(
+            //   'web_app_open_link',
+            //   JSON.stringify({
+            //     url: 'https://coinmarketcap.com/',
+            //     try_instant_view: false,
+            //   }),
+            // );
+
+            window.open('https://coinmarketcap.com', '_self');
+          }}
+        >
+          <span className="line-clamp-* truncate text-ellipsis">open_link</span>
+        </Button>
+        <Button
+          onClick={() => {
+            // window.TelegramWebviewProxy.postEvent(
+            //   'web_app_open_link',
+            //   JSON.stringify({
+            //     url: 'https://coinmarketcap.com/',
+            //     try_instant_view: false,
+            //   }),
+            // );
+
+            window.open('https://coinmarketcap.com', '_blank');
           }}
         >
           <span className="line-clamp-* truncate text-ellipsis">open_link</span>
